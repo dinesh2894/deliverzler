@@ -16,4 +16,15 @@ class AppColors {
 
   // Text
   static const Color lightThemeBigTextColor = Color(0xFF000000);
+  static const Color darkThemeBigTextColor = Color(0xFFF0F0F0);
+  static const Color lightThemeNormalTextColor = Color(0xFF000000);
+  static const Color darkThemeNormalTextColor = Color(0xFFF0F0F0);
+  static const Color lightThemeSmallTextColor = Color(0xFF858992);
+  static const Color darkThemeSmallTextColor = Color(0xFFCCCCCC);
+
+  // TextField
+  static const Color lightThemeTextFieldFillColor = lightThemeScaffoldBGColor;
+  static const Color darkThemeTextFieldFillColor = darkThemeScaffoldBGColor;
+
+
 }
