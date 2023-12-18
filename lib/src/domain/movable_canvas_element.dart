@@ -25,6 +25,7 @@ class MovableCanvasElement<T> extends StatefulWidget {
 }
 
 class _MovableCanvasElementState<T> extends State<MovableCanvasElement<T>> {
+
   ValueChanged<Offset> get onCanvasElementMove => (coordinate) => widget.elements.value =
       widget.elements.value.selectElement(widget.element..coordinate = coordinate);
 
@@ -62,13 +63,11 @@ class _MovableCanvasElementState<T> extends State<MovableCanvasElement<T>> {
         startPosition = null;
         onCanvasElementMoveEnd();
       },
-
-      onPointerUp: (_){
+      onPointerUp: (_) {
         lastOffset = null;
         startPosition = null;
         onCanvasElementMoveEnd();
       },
-
       behavior: HitTestBehavior.translucent,
       child: widget.child,
     );
