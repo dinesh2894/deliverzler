@@ -145,14 +145,13 @@ class WidgetCanvasRenderTwoDimensionalViewport<T> extends RenderTwoDimensionalVi
     );
 
     if (sorted == null) return <CanvasElement<T>>[];
-    sorted =
-        sorted.binaryList(WidgetCanvasChildDelegate.defaultCompare(Axis.vertical)).whereIndexed(
-              (element) => BinaryList.isInRange(
-                topLeft.dy,
-                bottomRight.dy,
-                (a, b) => a.compareTo(b),
-              )(element.coordinate.dy),
-            );
+    sorted = sorted
+        .binaryList(WidgetCanvasChildDelegate.defaultCompare(Axis.vertical))
+        .whereIndexed((element) => BinaryList.isInRange(
+              topLeft.dy,
+              bottomRight.dy,
+              (a, b) => a.compareTo(b),
+            )(element.coordinate.dy));
 
     if (sorted == null) return <CanvasElement<T>>[];
 
@@ -160,6 +159,7 @@ class WidgetCanvasRenderTwoDimensionalViewport<T> extends RenderTwoDimensionalVi
 
     for (final selected in elements.selected) {
       final index = list.indexOf(selected);
+
       if (index == -1) {
         list.add(selected);
       } else {
