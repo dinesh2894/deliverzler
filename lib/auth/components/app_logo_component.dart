@@ -12,7 +12,7 @@ class AppLogoComponent extends StatelessWidget {
         // TODO: add new Image here
         // TODO: refresh() here
         // TODO: reload() here
-        // TODO: new feat
+        // TODO: new featq
       ],
     );
   }
