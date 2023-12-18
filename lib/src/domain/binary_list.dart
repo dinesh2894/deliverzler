@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import '../widget_canvas.dart';
 import 'canvas_element.dart';
 
@@ -47,11 +47,17 @@ class BinaryList<T extends Comparable<Object>> {
   }
 
   BinaryList<T> add(T element) {
-    return BinaryList(list: [...list, element], compare: _compare);
+    return BinaryList(
+      list: [...list, element],
+      compare: _compare,
+    );
   }
 
   BinaryList<T> addAll(Iterable<T> elements) {
-    return BinaryList(list: [...list, ...elements], compare: _compare);
+    return BinaryList(
+      list: [...list, ...elements],
+      compare: _compare,
+    );
   }
 
   BinaryList<T> remove(T element) {
