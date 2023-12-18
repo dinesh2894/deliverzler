@@ -1,7 +1,6 @@
 import 'package:deliverzler/src/widget_canvas.dart';
 import 'package:flutter/material.dart';
 
-
 typedef Coordinate = Offset;
 
 class CanvasElement<T> extends ValueNotifier<Coordinate>
@@ -19,8 +18,10 @@ class CanvasElement<T> extends ValueNotifier<Coordinate>
 
   set coordinate(Coordinate coordinate) => value = coordinate;
 
-  late final ChildVicinity vicinity =
-      ChildVicinity(xIndex: id, yIndex: WidgetCanvasRenderTwoDimensionalViewport.contentLayer);
+  late final ChildVicinity vicinity = ChildVicinity(
+    xIndex: id,
+    yIndex: WidgetCanvasRenderTwoDimensionalViewport.contentLayer,
+  );
 
   @override
   bool operator ==(Object other) => other is CanvasElement ? value == other.value : false;
